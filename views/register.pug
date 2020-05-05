@@ -1,0 +1,86 @@
+// Author:        Yeji Soh, Jacobus Badenhorst, Jin Li 
+// Date:          03/20/2020 
+// Course Module: CPRG 210 XM5
+// Assignment:    Proj-207 Travel Experts
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='Register' content='Register')
+  title Register
+  link(rel='stylesheet' type='text/css' href='../CSS/register.css')
+  link(href='https://fonts.googleapis.com/css?family=Merriweather|Muli:300' rel='stylesheet')
+
+// Global nav bar with logo
+header.header-container
+  .logo
+    a(href='../index' title='Welcome to Travel Experts')
+      img(src='../img/logo_other.JPG' width='250')
+  h1 Registration
+  nav
+    ul
+      li.nav-li
+        a(href='../index')
+          strong Home
+      li.nav-li
+        a(href='../register')
+          strong Register
+      li.nav-li
+        a(href='../contact')
+          strong Contact
+
+// Main registration form
+
+main
+  h2 Customer Information
+  div
+    // information filled out in the form will be collected to corresponding account of getform.io.
+    form.cust-form(method='POST' action='/post_form')
+      label userID: * 
+      input#userID(type='text' rules='required|min:3' name='userID' placeholder='Enter your userID.' required='')
+      small#alert-ID
+      label Password: * 
+      input#password(type='password' rules='required|min:3' name='password' placeholder='Enter your password.' required='')
+      small#alert-PW
+      label Name: * 
+      input#name(type='text' rules='required|min:3' name='name' placeholder='Enter your name.' required='')
+      small#alert-name
+      label Address:  
+      input(type='text' rules='required|min:3' name='address' placeholder='Enter your address.')
+      label City: 
+      input(type='text' rules='required|min:3' name='city' placeholder='Enter the city you live in.')
+      label Province: 
+      select#prov(name='prov')
+        option(value='')
+        option(value='AB') AB
+        option(value='BC') BC
+        option(value='MB') MB
+        option(value='NB') NB
+        option(value='NL') NL
+        option(value='NT') NT
+        option(value='NS') NS
+        option(value='NU') NU
+        option(value='ON') ON
+        option(value='PE') PE
+        option(value='QC') QC
+        option(value='SK') SK
+        option(value='YT') YT
+      label Postal Code: 
+      input#pcode(type='text' rules='required|min:3' name='postalCode' placeholder='Enter the postal code with a blank included, e.g. T2R 0M8')
+      small#alert-pcode
+      label Phone: * 
+      input#phone(type='tel' rules='required|min:3' name='phone' placeholder='Enter your phone number without any special characters, e.g. 4037558645' required='')
+      small#alert-phone
+      label Email: * 
+      input#email(type='email' rules='required|min:3' name='email' placeholder='Enter your email address, e.g. john.doe@gmail.com' required='')
+      small#alert-email
+      label Message: 
+      textarea(name='message' placeholder='Anything you would like to tell us?')
+      br
+      input#submit(type='submit' name='submit' value='Submit')
+
+// Javascript form validation
+script(src='../js/register.js')
+
+// Generic Footer
+footer Copyright &copy; Travel Experts, 2020 

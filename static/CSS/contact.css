@@ -1,0 +1,158 @@
+/* Author:        Yeji Soh, Jacobus Badenhorst */
+/* Date:          03/20/2020 */
+/* Course Module: CPRG 210 XM5 */
+/* Assignment:    Proj-207 Travel Experts */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Contact */
+body{
+    background-color: #fcefee;
+    Font-Family: 'Muli', Sans-Serif;
+    font-size: 20px;
+}
+
+
+/* Global nav bar with logo */
+.header-container {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo {
+    margin-left: 2.3em;
+}
+nav {
+    align-self: center;
+    margin: 0 0.8em 0 0;
+}
+.header-container ul {
+    list-style: none;
+}
+.header-container ul .nav-li {
+    display: inline;
+    padding: 0 1.4em 0 0;
+    
+}
+a {
+    font-size: 20px;
+    Font-Family: 'Muli', Sans-Serif;
+    color: #333;
+    text-decoration: none;
+}
+
+
+.header-container h1{
+    text-decoration: underline solid black;
+}
+
+
+/* Info about company and map */
+.ouragency{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+}
+
+.map{
+    border:10px solid rgb(250, 235, 148);
+}
+
+.break{
+    display: block;
+    Font-Family: 'Muli', Sans-Serif;
+    margin: 1em;
+    text-align: center;
+    text-emphasis: bold;
+}
+
+/* Info about agencies and agents */
+.agencies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.box{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+.head th{
+    padding-right: 1em;
+}
+
+.agents{
+    background-color: rgb(250, 235, 148);
+    border: 4px solid darkgray;
+    border-radius: 5px;
+}
+.agents h1{
+    text-align: center;
+}
+
+
+/* Responsiveness */
+@media screen and (max-width:1265px){
+    .agents{
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .logo img{
+        width: 200px;       
+    }
+    .logo{
+        margin: 0;
+    }
+    .header-container ul{
+        padding: 0;
+        display:flex;
+        flex-direction: column;
+    }
+    .nav-li{
+        margin-bottom: 8px;
+    }
+    h1 {
+        font-size: 5vw;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:903px){
+    .ourinfo{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:647px){
+    .agencies{
+        font-size: 15px;
+    }
+    .agents{
+        width: 100vw;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Generic Footer */
+footer{
+    Font-Family: 'Muli', Sans-Serif;
+    Font-Size: 13px;
+    text-align: center;
+    margin: 1em;
+}

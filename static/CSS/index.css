@@ -1,0 +1,193 @@
+/* Author:        Yeji Soh, Jacobus Badenhorst */
+/* Date:          03/20/2020 */
+/* Course Module: CPRG 210 XM5 */
+/* Assignment:    Proj-207 Travel Experts */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+/* Hero Section */
+header {
+    display: flex;
+    flex-direction: row;
+    
+    height: 100vh;
+    background-color: #fcefee;
+    background-image: url("../img/IMG_1243.JPG");
+    background-size: contain; 
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+}
+
+
+h1{
+    margin: 0.8em;
+    margin-left: 1em;
+    Font-Family: 'Merriweather', Serif;
+    Font-Size: 40px;
+}
+
+/* Add extra flex container for header centering */
+.hero p{
+    margin: 10vw;
+}
+.logo {
+    width: 300px;
+    height: 90px;
+}
+
+/* Make header more centered once screen gets narrower */
+@media screen and (max-width:700px){
+    .logo{
+        width: 30vw;
+        height: 80px;
+    }
+}
+
+/* Body */
+body{
+    background-color:#fcefee;
+}
+.main-p{
+    display: block;
+    Font-Family: 'Muli', Sans-Serif;
+    Font-Size: 20px;
+    margin: 1em;
+    border-bottom: 5px solid black;
+    text-align: center;
+    text-emphasis: bold;
+    font-size: 30px;
+
+}
+
+/* Fixed Buttons. Only for Index page */
+.Home, .Register, .Contact {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    width: 10ch;
+    height: 5ch;
+    text-align: center;
+    Font-Family: 'Muli', Sans-Serif;
+    Font-Size: 16px;
+    text-decoration: none;
+    position: fixed;
+    z-index: 1;
+}
+.Home{
+    top: 7em;
+}
+.Register{
+    top: 10.5em;
+}
+
+.Contact{
+    top: 14em;
+}
+
+
+/* Gallary: Responsive Grid */
+div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: repeat(2, 30vw); */
+    grid-gap: 1em;
+    margin: 1em;
+    Font-Family: 'Muli', Sans-Serif;
+}
+.gallery_img{
+    display:block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gallery Info on Mouseover */
+.overlay_1, .overlay_2, .overlay_3, .overlay_4, .overlay_5, .overlay_6 {
+    display:flex;
+    flex-direction: column;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+
+/* Fix text within packages when screen gets small */
+@media screen and (max-width: 1045px){
+    .red, .yellow, .green{
+        font-size: 3vw;
+    }
+    div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+}
+
+/* Individual Package content configuration */
+.img_1:hover .overlay_1, .img_2:hover .overlay_2, .img_3:hover .overlay_3, .img_4:hover .overlay_4, .img_5:hover .overlay_5, .img_6:hover .overlay_6 {
+    opacity: 1;
+
+}
+
+
+.img_1{
+    position: relative;
+}
+.overlay_1 {
+    position: absolute;
+    font-size: 2vw;
+}
+
+.img_2{
+    position: relative;
+}
+.overlay_2 {
+    position: absolute;
+    font-size: 2vw;
+}
+
+.img_3{
+    position: relative;
+}
+.overlay_3 {
+    position: absolute;
+    font-size: 2vw;
+}
+.img_4{
+    position: relative;
+}
+.overlay_4 {
+    position: absolute;
+    font-size: 2vw;
+}
+
+p.red{
+    color: red;
+}
+p.yellow{
+    color: yellow;
+}
+p.green{
+    color: green;
+}
+
+
+/* Footer */
+footer{
+    Font-Family: 'Muli', Sans-Serif;
+    Font-Size: 13px;
+    text-align: center;
+    margin: 1em;
+}
+

@@ -1,0 +1,91 @@
+// Author:        Yeji Soh, Jacobus Badenhorst, Jin Li 
+// Date:          03/20/2020 
+// Course Module: CPRG 210 XM5
+// Assignment:    Proj-207 Travel Experts
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='Contact' content='Contact')
+  title Contact
+  link(rel='stylesheet' type='text/css' href='../CSS/contact.css')
+  link(href='https://fonts.googleapis.com/css?family=Merriweather|Muli:300' rel='stylesheet')
+// Gloal nav bar with logo
+header.header-container
+  .logo
+    a(href='../index' title='Welcome to Travel Experts')
+      img(src='../img/logo_other.JPG' width='250')
+  h1 Contact Information
+  nav
+    ul
+      li.nav-li
+        a(href='../index')
+          strong Home
+      li.nav-li
+        a(href='../register')
+          strong Register
+      li.nav-li
+        a(href='../contact')
+          strong Contact
+
+// Contact Information for the agency and individual agents
+main.ouragency
+  section.ourinfo 
+    h2 Contact Our Agency: 
+    br
+    h3 Calgary Office
+    h3 !{agencies[0].AgncyAddress}
+    br
+    h3 !{agencies[0].AgncyCity} !{agencies[0].AgncyProv}
+    br
+    h3 !{agencies[0].AgncyCountry} !{agencies[0].AgncyPostal}
+    br
+    h3 !{agencies[0].AgncyPhone}
+  
+  figure.map
+    iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.3845448110987!2d-114.09056018403193!3d51.045986952154756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fe76e972489%3A0x149461cedf5b7c5b!2s1155%208%20Ave%20SW%2C%20Calgary%2C%20AB!5e0!3m2!1sen!2sca!4v1584735635006!5m2!1sen!2sca' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
+
+// Line Break
+h1.break Agents Contact:
+
+// Agencies table with address and agents as rows
+div.agencies
+  section.agents 
+    h1 Agency 1
+    table.box
+      tr.head
+        th= agencies[0].AgncyAddress+','
+        th= agencies[0].AgncyCity
+      br
+      table
+        for item in agentList1
+          tr
+            th= item.AgtFirstName
+            th= item.AgtLastName
+            th= item.AgtBusPhone
+            th= item.AgtEmail
+
+  section.agents 
+    h1 Agency 2
+    table.box
+      tr.head
+        th= agencies[1].AgncyAddress+ ','
+        th= agencies[1].AgncyCity
+      br
+      table
+        for item in agentList2
+          tr
+            th= item.AgtFirstName
+            th= item.AgtLastName
+            th= item.AgtBusPhone
+            th= item.AgtEmail
+
+  
+// Generic Footer
+footer Copyright &copy; Travel Experts, 2020 
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+// Author:        Yeji Soh, Jacobus Badenhorst, Jin Li 
+// Date:          03/20/2020 
+// Course Module: CPRG 210 XM5
+// Assignment:    Proj-207 Travel Experts
+
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' type='text/css' href='CSS/thanks.css')
+  link(href='https://fonts.googleapis.com/css?family=Merriweather|Muli:300' rel='stylesheet')
+
+// Logo and navigation header
+header.header-container
+  .logo
+    a(href='index' title='Welcome to Travel Experts')
+      img(src='img/logo_other.JPG' width='250')
+  nav
+    ul
+      li.nav-li
+        a(href='index')
+          strong Home
+      li.nav-li
+        a(href='register')
+          strong Register
+      li.nav-li
+        a(href='contact')
+          strong Contact
+
+// Thank you message
+h1 Thank you for registering with us.
+h3 We will get back to you ASAP!
+
+// Incentivize them to start booking, redirects to homepage. Packages are on second page
+p.book In the meantime, go ahead, 
+  a(href='index') book 
+  | your trip!
+
+// Help message
+p.help
+  | Having Trouble?     
+  a(href="contact")
+    |   Contact Us
+
+// Generic Footer
+footer Copyright &copy; Travel Experts, 2020 
